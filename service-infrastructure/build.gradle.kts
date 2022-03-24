@@ -5,10 +5,6 @@ plugins {
     kotlin("plugin.jpa") version PluginVersions.JPA_PLUGIN_VERSION
 }
 
-repositories {
-    mavenCentral()
-}
-
 dependencies {
     implementation(Dependencies.REACTIVE_HIBERNATE)
     implementation(Dependencies.REACTIVE_JDSL)
