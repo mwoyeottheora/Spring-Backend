@@ -1,4 +1,4 @@
-package com.xquare.v1userservice.user
+package com.example.mwoyeottheora.user
 
 import org.hibernate.annotations.NaturalId
 import java.util.*

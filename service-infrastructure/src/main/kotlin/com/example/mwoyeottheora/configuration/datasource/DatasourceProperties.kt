@@ -1,4 +1,4 @@
-package com.xquare.v1userservice.configuration.datasource
+package com.example.mwoyeottheora.configuration.datasource
 
 import org.springframework.boot.context.properties.ConfigurationProperties
 import org.springframework.boot.context.properties.ConstructorBinding

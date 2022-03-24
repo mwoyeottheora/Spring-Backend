@@ -1,6 +1,6 @@
-package com.xquare.v1userservice.user.repository
+package com.example.mwoyeottheora.user.repository
 
-import com.xquare.v1userservice.user.User
+import com.example.mwoyeottheora.user.User
 import java.util.*
 
 interface UserRepository {

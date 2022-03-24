@@ -3,7 +3,7 @@ package com.example.mwoyeottheora
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
-internal const val BASE_PACKAGE = "com.xquare.v1userservice"
+internal const val BASE_PACKAGE = "com.example.mwoyeottheora"
 
 @SpringBootApplication
 class MwoyeottheoraApplication

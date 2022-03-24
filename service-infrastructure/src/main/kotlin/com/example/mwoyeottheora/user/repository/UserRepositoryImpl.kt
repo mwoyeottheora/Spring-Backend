@@ -1,9 +1,9 @@
-package com.xquare.v1userservice.user.repository
+package com.example.mwoyeottheora.user.repository
 
 import com.linecorp.kotlinjdsl.query.HibernateMutinyReactiveQueryFactory
 import com.linecorp.kotlinjdsl.querydsl.expression.col
 import com.linecorp.kotlinjdsl.selectQuery
-import com.xquare.v1userservice.user.User
+import com.example.mwoyeottheora.user.User
 import java.util.*
 
 class UserRepositoryImpl(

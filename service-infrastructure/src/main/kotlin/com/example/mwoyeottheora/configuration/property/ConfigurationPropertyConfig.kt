@@ -1,4 +1,4 @@
-package com.xquare.v1userservice.configuration.property
+package com.example.mwoyeottheora.configuration.property
 
 import com.example.mwoyeottheora.BASE_PACKAGE
 import org.springframework.boot.context.properties.ConfigurationPropertiesScan
