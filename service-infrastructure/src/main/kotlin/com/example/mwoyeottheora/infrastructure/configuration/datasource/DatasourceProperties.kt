@@ -1,4 +1,4 @@
-package com.example.mwoyeottheora.configuration.datasource
+package com.example.mwoyeottheora.infrastructure.configuration.datasource
 
 import org.springframework.boot.context.properties.ConfigurationProperties
 import org.springframework.boot.context.properties.ConstructorBinding
