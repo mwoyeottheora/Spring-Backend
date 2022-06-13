@@ -1,4 +1,4 @@
-package com.example.mwoyeottheora.configuration.datasource
+package com.example.mwoyeottheora.infrastructure.configuration.datasource
 
 import com.linecorp.kotlinjdsl.query.HibernateMutinyReactiveQueryFactory
 import com.linecorp.kotlinjdsl.query.creator.SubqueryCreator

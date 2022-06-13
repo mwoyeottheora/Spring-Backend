@@ -1,6 +1,6 @@
-package com.example.mwoyeottheora.configuration.property
+package com.example.mwoyeottheora.infrastructure.configuration.property
 
-import com.example.mwoyeottheora.BASE_PACKAGE
+import com.example.mwoyeottheora.infrastructure.BASE_PACKAGE
 import org.springframework.boot.context.properties.ConfigurationPropertiesScan
 import org.springframework.context.annotation.Configuration
 
