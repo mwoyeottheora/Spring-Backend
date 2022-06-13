@@ -6,4 +6,5 @@ object DependencyVersions {
     const val MUTINY_KOTLIN_VERSION = "1.4.0"
     const val JDSL_VERSION = "2.0.1.RELEASE"
     const val COROUTINE_VERSION = "1.6.0"
+    const val JJWT_VERSION = "0.9.1"
 }

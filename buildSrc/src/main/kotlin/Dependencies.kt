@@ -12,7 +12,7 @@ object Dependencies {
     val WEBFLUX by lazy { "org.springframework.boot:spring-boot-starter-webflux" }
     val VALIDATION by lazy { "org.springframework.boot:spring-boot-starter-validation" }
     val JACKSON by lazy { "com.fasterxml.jackson.module:jackson-module-kotlin" }
-    val AWS_MESSAGING by lazy { "org.springframework.cloud:spring-cloud-starter-aws-messaging" }
+    val JJWT by lazy { "io.jsonwebtoken:jjwt:${DependencyVersions.JJWT_VERSION}" }
     val KOTLIN_REFLECT by lazy { "org.jetbrains.kotlin:kotlin-reflect" }
     val KOTLIN_STDLIB by lazy { "org.jetbrains.kotlin:kotlin-stdlib-jdk8" }
     val CONFIGURATION_PROCESSOR by lazy { "org.springframework.boot:spring-boot-configuration-processor" }
