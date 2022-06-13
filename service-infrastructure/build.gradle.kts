@@ -18,6 +18,7 @@ dependencies {
     implementation(Dependencies.WEBFLUX)
     implementation(Dependencies.VALIDATION)
     implementation(Dependencies.JACKSON)
+    implementation(Dependencies.JJWT)
     annotationProcessor(Dependencies.CONFIGURATION_PROCESSOR)
     testImplementation(Dependencies.SPRING_TEST)
     testImplementation(Dependencies.SECURITY_TEST)
