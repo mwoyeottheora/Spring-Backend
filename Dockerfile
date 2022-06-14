@@ -1,4 +1,4 @@
-FROM openjdk:11-jre-slim
+FROM openjdk:17.0-jdk-oraclelinux8
 
 COPY ./service-infrastructure/build/libs/*.jar app.jar
 
