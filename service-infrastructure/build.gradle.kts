@@ -11,6 +11,7 @@ dependencies {
     implementation(Dependencies.SPRING_DATA_COMMON)
     implementation(Dependencies.REACTIVE_MYSQL)
     implementation(Dependencies.MUTINY_KOTLIN)
+    implementation(Dependencies.MUTINY_REACTOR)
     implementation(Dependencies.SPRING_SECURITY)
     implementation(Dependencies.COROUTINE_REACTOR)
     implementation(Dependencies.COROUTINE_JDK)

@@ -11,6 +11,8 @@ import org.springframework.context.annotation.Configuration
 import javax.persistence.EntityManagerFactory
 import javax.persistence.Persistence
 import org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
+import org.hibernate.dialect.MySQL5InnoDBDialect
+import org.hibernate.dialect.MySQL8Dialect
 import org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
 
 @Configuration(proxyBeanMethods = false)

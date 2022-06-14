@@ -1,10 +1,11 @@
 object Dependencies {
-    val SPRING_CLOUD by lazy { "org.springframework.cloud:spring-cloud-dependencies:${DependencyVersions.SPRING_CLOUD_VERSION}" }
+    val MUTINY_KOTLIN by lazy { "io.smallrye.reactive:mutiny-kotlin:${DependencyVersions.MUTINY_KOTLIN_VERSION}" }
+    val MUTINY_REACTOR by lazy { "io.smallrye.reactive:mutiny-reactor:${DependencyVersions.MUTINY_KOTLIN_VERSION}" }
     val REACTIVE_JDSL by lazy { "com.linecorp.kotlin-jdsl:spring-data-kotlin-jdsl-hibernate-reactive:${DependencyVersions.JDSL_VERSION}" }
     val REACTIVE_MYSQL by lazy { "io.vertx:vertx-mysql-client:${DependencyVersions.REACTIVE_MYSQL_VERSION}" }
     val REACTIVE_HIBERNATE by lazy { "org.hibernate.reactive:hibernate-reactive-core:${DependencyVersions.HIBERNATE_REACTIVE_VERSION}" }
     val SPRING_DATA_COMMON by lazy { "org.springframework.data:spring-data-commons" }
-    val MUTINY_KOTLIN by lazy { "io.smallrye.reactive:mutiny-kotlin:${DependencyVersions.MUTINY_KOTLIN_VERSION}" }
+    val SPRING_CLOUD by lazy { "org.springframework.cloud:spring-cloud-dependencies:${DependencyVersions.SPRING_CLOUD_VERSION}" }
     val SPRING_SECURITY by lazy { "org.springframework.boot:spring-boot-starter-security" }
     val COROUTINE_REACTOR by lazy { "org.jetbrains.kotlinx:kotlinx-coroutines-reactor:${DependencyVersions.COROUTINE_VERSION}" }
     val COROUTINE_JDK by lazy { "org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:${DependencyVersions.COROUTINE_VERSION}" }

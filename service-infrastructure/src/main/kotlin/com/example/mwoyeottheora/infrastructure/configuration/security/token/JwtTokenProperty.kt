@@ -8,7 +8,6 @@ import java.util.*
 @ConfigurationProperties(prefix = "jwt")
 class JwtTokenProperty(
     val accessTokenExpirationForMinute: Long,
-    val refreshTokenExpirationForMinute: Long,
     val jwtHeaderName: String,
     val jwtTokenType: String,
     secretKey: String

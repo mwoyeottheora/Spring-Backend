@@ -17,6 +17,11 @@ server:
   shutdown: graceful
   port: 8090
 
+jwt:
+  accessTokenExpirationForMinute: 7200
+  jwtHeaderName: Authorization
+  jwtTokenType: Bearer
+  secretKey: asdfasdf
 ---
 
 spring:
