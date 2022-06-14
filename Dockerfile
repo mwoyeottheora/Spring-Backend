@@ -1,4 +1,4 @@
-FROM openjdk:17.0-jdk-oraclelinux8
+FROM openjdk:17-alpine
 
 COPY ./service-infrastructure/build/libs/*.jar app.jar
 
