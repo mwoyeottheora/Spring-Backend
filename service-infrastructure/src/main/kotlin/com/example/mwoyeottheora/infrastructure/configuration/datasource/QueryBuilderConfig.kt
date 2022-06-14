@@ -10,6 +10,8 @@ import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import javax.persistence.EntityManagerFactory
 import javax.persistence.Persistence
+import org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
+import org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
 
 @Configuration(proxyBeanMethods = false)
 @ConditionalOnClass(ReactiveSession::class)
@@ -20,10 +22,12 @@ class QueryBuilderConfig {
         private const val DB_USERNAME_PROPERTY = "javax.persistence.jdbc.user"
         private const val DB_PASSWORD_PROPERTY = "javax.persistence.jdbc.password"
         private const val DB_POOL_SIZE_PROPERTY = "hibernate.connection.pool_size"
-        private const val DDL_AUTO_MODE_PROPERTY = "hibernate.hbm2ddl.auto"
+        private const val DDL_AUTO_MODE_PROPERTY = "javax.persistence.schema-generation.database.action"
         private const val SHOW_SQL_PROPERTY = "hibernate.show_sql"
         private const val FORMAT_SQL_PROPERTY = "hibernate.format_sql"
         private const val HIGHLIGHT_SQL_PROPERTY = "hibernate.highlight_sql"
+        private const val IMPLICIT_NAMING_STRATEGY = "hibernate.implicit_naming_strategy"
+        private const val PHYSICAL_NAMING_STRATEGY = "hibernate.physical_naming_strategy"
     }
 
     @Bean
@@ -42,6 +46,8 @@ class QueryBuilderConfig {
             put(SHOW_SQL_PROPERTY, datasourceProperties.showSql.toString())
             put(FORMAT_SQL_PROPERTY, datasourceProperties.formatSql.toString())
             put(HIGHLIGHT_SQL_PROPERTY, datasourceProperties.highlightSql.toString())
+            put(IMPLICIT_NAMING_STRATEGY, SpringImplicitNamingStrategy::class.java.name)
+            put(PHYSICAL_NAMING_STRATEGY, CamelCaseToUnderscoresNamingStrategy::class.java.name)
         }.toMap()
 
         return Persistence.createEntityManagerFactory("user-service-mysql", properties)
