@@ -28,7 +28,7 @@ class SecurityConfig(
             .permitAll()
             .and()
             .csrf().disable()
-            .cors().disable()
+            .cors().and()
             .build()
     }
 
