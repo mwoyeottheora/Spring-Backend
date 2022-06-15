@@ -15,6 +15,7 @@ class SecurityConfig {
         return http.authorizeExchange()
             .pathMatchers(HttpMethod.POST, "/users").permitAll()
             .pathMatchers(HttpMethod.POST, "/users/tokens").permitAll()
+            .pathMatchers(HttpMethod.POST, "/words/random").permitAll()
             .anyExchange()
             .authenticated()
             .and().build()
