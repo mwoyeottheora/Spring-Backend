@@ -19,6 +19,6 @@ class JwtTokenExtractor(
             tokenParser.getUsernamePasswordAuthenticationTokenFromToken(pureToken)
         }
 
-        authenticationOrNull!!
+        authenticationOrNull
     }
 }

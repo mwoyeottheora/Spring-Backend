@@ -3,17 +3,15 @@ package com.example.mwoyeottheora.infrastructure.configuration.datasource
 import com.linecorp.kotlinjdsl.query.HibernateMutinyReactiveQueryFactory
 import com.linecorp.kotlinjdsl.query.creator.SubqueryCreator
 import com.linecorp.kotlinjdsl.query.creator.SubqueryCreatorImpl
-import org.hibernate.reactive.mutiny.Mutiny
-import org.hibernate.reactive.session.ReactiveSession
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass
-import org.springframework.context.annotation.Bean
-import org.springframework.context.annotation.Configuration
 import javax.persistence.EntityManagerFactory
 import javax.persistence.Persistence
 import org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
-import org.hibernate.dialect.MySQL5InnoDBDialect
-import org.hibernate.dialect.MySQL8Dialect
+import org.hibernate.reactive.mutiny.Mutiny
+import org.hibernate.reactive.session.ReactiveSession
+import org.springframework.boot.autoconfigure.condition.ConditionalOnClass
 import org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
+import org.springframework.context.annotation.Bean
+import org.springframework.context.annotation.Configuration
 
 @Configuration(proxyBeanMethods = false)
 @ConditionalOnClass(ReactiveSession::class)

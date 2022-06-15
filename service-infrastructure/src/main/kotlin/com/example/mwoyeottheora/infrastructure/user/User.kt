@@ -1,9 +1,10 @@
 package com.example.mwoyeottheora.infrastructure.user
 
-import org.hibernate.annotations.NaturalId
-import java.util.*
+import java.util.UUID
+import javax.persistence.Column
 import javax.persistence.Entity
 import javax.persistence.Id
+import org.hibernate.annotations.NaturalId
 
 @Entity
 class User(
@@ -12,5 +13,6 @@ class User(
     val password: String
 ) {
     @Id
+    @Column(length = 16)
     val id: UUID = UUID.randomUUID()
 }

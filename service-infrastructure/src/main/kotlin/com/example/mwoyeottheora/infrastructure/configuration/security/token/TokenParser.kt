@@ -22,6 +22,7 @@ class TokenParser(
         return UsernamePasswordAuthenticationToken(userDetails, "", userDetails.authorities)
     }
 
+
     private fun parseToken(tokenWithoutPrefix: String): Jws<Claims> =
         Jwts.parser().setSigningKey(tokenProperty.secretKey).parseClaimsJws(tokenWithoutPrefix)
 }

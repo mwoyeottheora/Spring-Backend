@@ -5,5 +5,5 @@ data class WordListResponse(
 )
 
 data class WordResponse(
-    val word: String
+    val word: String?
 )

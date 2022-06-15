@@ -4,5 +4,8 @@
              version="2.2">
     <persistence-unit name="user-service-mysql">
         <provider>org.hibernate.reactive.provider.ReactivePersistenceProvider</provider>
+        <class>com.example.mwoyeottheora.infrastructure.user.User</class>
+        <class>com.example.mwoyeottheora.infrastructure.word.FoundWord</class>
+        <exclude-unlisted-classes>false</exclude-unlisted-classes>
     </persistence-unit>
 </persistence>
