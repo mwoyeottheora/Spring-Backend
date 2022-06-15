@@ -5,6 +5,7 @@ import com.example.mwoyeottheora.infrastructure.word.service.WordApiListResponse
 import com.linecorp.kotlinjdsl.query.HibernateMutinyReactiveQueryFactory
 import com.linecorp.kotlinjdsl.querydsl.expression.col
 import com.linecorp.kotlinjdsl.selectQuery
+import io.smallrye.mutiny.coroutines.awaitSuspending
 import java.util.UUID
 import kotlinx.coroutines.reactor.awaitSingle
 import org.springframework.http.MediaType
@@ -57,5 +58,11 @@ class WordRepositoryImpl(
                 where(col(FoundWord::userId).equal(userId))
             }
         }.resultList()
+    }
+
+    override suspend fun findRandom(): FoundWord {
+        return reactiveQueryFactory.withFactory { session, _ ->
+            session.createNativeQuery<FoundWord>("SELECT idx, writer, title FROM found_word ORDER BY RAND() LIMIT 1;")
+        }.singleResult.awaitSuspending()
     }
 }

@@ -31,4 +31,9 @@ class WordHandler(
         val wordListResponse = wordService.getAllUserFoundWord()
         return ServerResponse.ok().bodyValueAndAwait(wordListResponse)
     }
+
+    suspend fun handleGetRandomWord(serverRequest: ServerRequest): ServerResponse {
+        val wordResponse = wordService.getRandomFoundWord()
+        return ServerResponse.ok().bodyValueAndAwait(wordResponse)
+    }
 }

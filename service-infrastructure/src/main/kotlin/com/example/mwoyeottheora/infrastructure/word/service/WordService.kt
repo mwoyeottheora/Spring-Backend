@@ -28,4 +28,9 @@ class WordService(
         val words = wordRepository.findAllByUserId(UUID.fromString(userId))
         return WordListResponse(words.map { WordResponse(it.name) })
     }
+
+    suspend fun getRandomFoundWord(): WordResponse {
+        val word = wordRepository.findRandom()
+        return WordResponse(word.name)
+    }
 }

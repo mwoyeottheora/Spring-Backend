@@ -15,6 +15,7 @@ class WordRouter(
             GET("", wordHandler::handleGetWord)
             POST("", wordHandler::handleSaveFoundWord)
             GET("/users", wordHandler::handleGetFoundWord)
+            GET("/random", wordHandler::handleGetRandomWord)
         }
     }
 }
