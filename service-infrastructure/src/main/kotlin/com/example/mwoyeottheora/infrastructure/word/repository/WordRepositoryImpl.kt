@@ -32,7 +32,9 @@ class WordRepositoryImpl(
     }
 
     private fun UriBuilder.buildQueryWordEndpoint(name: String): URI {
-        return this.host("https://opendict.korean.go.kr")
+        return this
+            .scheme("https")
+            .host("opendict.korean.go.kr")
             .path("/api/search")
             .queryParam("q", name)
             .queryParam("req_type", "json")
