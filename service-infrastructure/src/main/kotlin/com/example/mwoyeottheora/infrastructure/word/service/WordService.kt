@@ -31,6 +31,6 @@ class WordService(
 
     suspend fun getRandomFoundWord(): WordResponse {
         val word = wordRepository.findRandom()
-        return WordResponse(word?.name)
+        return WordResponse(word)
     }
 }

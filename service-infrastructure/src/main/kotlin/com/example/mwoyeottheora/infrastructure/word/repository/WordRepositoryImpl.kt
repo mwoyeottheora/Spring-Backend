@@ -75,9 +75,9 @@ class WordRepositoryImpl(
         }
     }
 
-    override suspend fun findRandom(): FoundWord? {
+    override suspend fun findRandom(): String? {
         return reactiveQueryFactory.withFactory { session, _ ->
-            session.createNativeQuery<FoundWord>("SELECT name, user_id, id FROM found_word ORDER BY RAND() LIMIT 1;")
+            session.createNativeQuery<String>("SELECT name FROM found_word ORDER BY RAND() LIMIT 1;")
                 .singleResultOrNull
                 .awaitSuspending()
         }
